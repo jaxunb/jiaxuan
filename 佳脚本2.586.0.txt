@@ -1482,7 +1482,7 @@ credits:Button("紫色手电筒买东西时使用",function()
        loadstring(game:HttpGet("https://raw.githubusercontent.com/K0t1n/Public/main/Purple%20Flashlight"))()
 end)
 
-local creds = window:Tab("神仙功能",'6035145364')
+local creds = window:Tab("变身功能",'6035145364')
 
 local tool = creds:section("功能",true)
 
