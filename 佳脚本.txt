@@ -1412,7 +1412,7 @@ credits:Button("人物踏空",function()
      loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Float'))()
 end)
 
-credits:Toggle("人物爬墙",function()
+credits:Button("人物爬墙",function()
 loadstring(game:HttpGet("https://pastebin.com/raw/zXk4Rq2r"))()
 end)
 
