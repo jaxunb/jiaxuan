@@ -1412,7 +1412,7 @@ tool:Button("夜间视野",function(Value)
 end)
 	
 tool:Button("飞车",function()
-        loadstring(game:HttpGet("http://jiami.guimei.work/a/1692161191.txt"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/jaxunb/jiaxuan/main/%E4%BD%B3%E8%BD%A9%E9%A3%9E%E8%BD%A6.txt"))()
 end)
 
 tool:Button("飞行",function()
@@ -1438,7 +1438,7 @@ mouse = game.Players.LocalPlayer:GetMouse() tool = Instance.new("Tool") tool.Req
 end)
 
 credits:Button("人物范围",function()
-loadstring(game:HttpGet('http://jiami.guimei.work/a/1692114606.txt'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/jaxunb/jiaxuan/main/%E4%BD%B3%E8%BD%A9%E8%8C%83%E5%9B%B4.txt'))()
 end)
 
 local creds = window:Tab("凹凸世界",'6035145364')
