@@ -1383,23 +1383,6 @@ local tool = creds:section("通用",true)
 tool:Button("防掉线 防踢(必须)",function()
 		   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 		   wait(1)
-
-tool:Button("设置移动速度",function(txt)
-game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = txt
-end)
- 
-tool:Textbox("设置跳跃高度",function(txt)	
-game.Players.LocalPlayer.Character.Humanoid.JumpPower = txt
-end)
-
-tool:Textbox("设置重力",function(txt)
-game.Workspace.Gravity = txt
-end)
-
-tool:Button("无敌",function()	
-loadstring(game:HttpGet('https://pastebin.com/raw/H3RLCWWZ'))()
-end)
-
 vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 		end)
 
