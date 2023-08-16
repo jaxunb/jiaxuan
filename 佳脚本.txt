@@ -1385,11 +1385,6 @@ tool:Button("防掉线 防踢(必须)",function()
 		   wait(1)
 vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 		end)
-
-tool:Textbox("设置移动速度",function(Value)
-game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
-	end	 
-end)
  
 tool:Button("无敌",function()	
 loadstring(game:HttpGet('https://pastebin.com/raw/H3RLCWWZ'))()
