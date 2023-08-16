@@ -1389,11 +1389,9 @@ tool:Button("防掉线 防踢(必须)",function()
     tool:Button("佳轩工具箱",function()
     loadstring(game:HttpGet("http://jiami.guimei.work/a/1692039668.txt"))()
     end)
-    
-tool:Toggle({
-	Name = "夜视",
-	Default = false,
-	Callback = function(Value)
+
+tool:Toggle("通用夜视",function(Value)
+Callback = function(Value)
 		if Value then
 		    game.Lighting.Ambient = Color3.new(1, 1, 1)
 		else
