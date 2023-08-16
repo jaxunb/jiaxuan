@@ -1391,7 +1391,6 @@ tool:Button("防掉线 防踢(必须)",function()
     end)
 
 tool:Toggle("通用夜视",function(Value)
-Callback = function(Value)
 		if Value then
 		    game.Lighting.Ambient = Color3.new(1, 1, 1)
 		else
