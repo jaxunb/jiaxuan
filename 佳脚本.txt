@@ -1390,7 +1390,7 @@ tool:Button("防掉线 防踢(必须)",function()
     loadstring(game:HttpGet("http://jiami.guimei.work/a/1692039668.txt"))()
     end)
     
-tool:Toggle("通用夜视",function(Value)
+tool:Button("通用夜视",function(Value)
         if Value then
 		    game.Lighting.Ambient = Color3.new(1, 1, 1)
 		else
@@ -1412,7 +1412,7 @@ end)
 
 local credits = creds:section("人物区",true)
 
-credits:Button("人物透视",function()
+credits:Textbox("人物透视",function()
         loadstring(game:GetObjects("rbxassetid://10092697033")[1].Source)()
 end)
 
@@ -1436,7 +1436,7 @@ local creds = window:Tab("凹凸世界",'6035145364')
 
 local tool = creds:section("自动获取裁判球",true)
 
-tool:Button("自动获取裁判球",function()
+tool:Textbox("自动获取裁判球",function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/KissxTay/caramelldansen/main/chinese%20event", true))()
   	end)
 
