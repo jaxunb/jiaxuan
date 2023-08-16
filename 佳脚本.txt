@@ -1445,7 +1445,7 @@ local creds = window:Tab("DOORS",'6035145364')
 local tool = creds:section("佳轩专区",true)
 
 tool:Button("佳轩自制DOORS脚本『最强脚本』",function()
-loadstring(game:HttpGet("http://jiami.guimei.work/a/1692177328.txt"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/jaxunb/jiaxuan/main/%E4%BD%B3%E8%BD%A9%E9%97%A8%E8%84%9A%E6%9C%AC.txt"))()
 end)
 
 local credits = creds:section("功能区",true)
