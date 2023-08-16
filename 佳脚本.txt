@@ -1384,7 +1384,7 @@ tool:Button("防掉线 防踢(必须)",function()
 		   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 		   wait(1)
 
-tool:Textbox("设置移动速度",function(txt)
+tool:Button("设置移动速度",function(txt)
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = txt
 end)
  
