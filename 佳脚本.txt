@@ -1353,11 +1353,11 @@ end
       return window
     end
     
-local window = library:new("佳轩脚本2.586.0")
+local window = library:new("佳轩脚本3.0")
 
-local creds = window:Tab("信息",'6035145364')
+local creds = window:Tab("关于信息",'6035145364')
 
-local bin = creds:section("信息",true)
+local bin = creds:section("关于信息",true)
 
     bin:Label("你的用户名："..game.Players.LocalPlayer.Character.Humanoid.Name)
     bin:Label("你的注入器:"..identifyexecutor())
