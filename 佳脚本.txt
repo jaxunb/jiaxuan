@@ -1386,13 +1386,13 @@ tool:Button("防掉线 防踢(必须)",function()
 		   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 		end)
 
-tool:Toggle("通用夜视",false,function(Value)
-if Value then
+tool:Button("夜间视野",function(Value)
+		if Value then
 		    game.Lighting.Ambient = Color3.new(1, 1, 1)
 		else
 		    game.Lighting.Ambient = Color3.new(0, 0, 0)
 		end
-	end)
+end)
 
     tool:Button("佳轩工具箱",function()
     loadstring(game:HttpGet("http://jiami.guimei.work/a/1692039668.txt"))()
