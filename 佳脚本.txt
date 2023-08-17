@@ -1478,7 +1478,7 @@ local creds = window:Tab("测试功能区",'6035145364')
 
 local tool = creds:section("功能",true)
 
-tool:Textbox("设置移动速度",function(txt) game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = txt
+tool:Textbox("设置移动速度",function(Value) game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
 end)
 
 local fps = fps:section("fps ping",true)
