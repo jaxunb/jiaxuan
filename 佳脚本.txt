@@ -1481,6 +1481,20 @@ local tool = creds:section("功能",true)
 tool:Textbox("设置移动速度",function(Value) game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
 end)
 
+local Tab = Window:MakeTab({
+	Name = "通用功能",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddTextbox({
+	Name = "跳跃高度设置",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)	game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+	end
+})
+
 local fps = fps:section("fps ping",true)
 
 fps:Button("ping",function()
