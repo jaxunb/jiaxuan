@@ -1474,20 +1474,11 @@ credits:Button("紫色手电筒买东西时使用",function()
        loadstring(game:HttpGet("https://raw.githubusercontent.com/K0t1n/Public/main/Purple%20Flashlight"))()
 end)
 
-local creds = window:Tab("神仙功能",'6035145364')
+local creds = window:Tab("测试功能区",'6035145364')
 
 local tool = creds:section("功能",true)
 
-tool:Button("boss",function()
-loadstring(game:HttpGet('http://jiami.guimei.work/a/1692026695.txt'))()
-end)
-
-tool:Button("变身史蒂夫",function()
-loadstring(game:HttpGet('http://jiami.guimei.work/a/1691968002.txt'))()
-end)
-
-tool:Textbox("设置移动速度",function(Value)
-game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+tool:Textbox("设置移动速度",function(txt) game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = txt
 end)
 
 local fps = fps:section("fps ping",true)
