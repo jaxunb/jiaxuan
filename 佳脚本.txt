@@ -4,6 +4,23 @@ local ToggleUI = false
 library.currentTab = nil
 library.flags = {}
 
+local notificationFrame = Instance.new("Frame")
+notificationFrame.Size = UDim2.new(0, 200, 0, 50)--大小
+notificationFrame.Position = UDim2.new(0.5, -100, 1, -50) --位置
+notificationFrame.BackgroundColor3 = Color3.new(1, 1, 1)--背景颜色3
+notificationFrame.Parent = notificationGui
+
+local notificationText = Instance.new("TextLabel")
+notificationText.Size = UDim2.new(1, 0, 1, 0)--大小
+notificationText.Position = UDim2.new(0, 0, 0, 0)--位置
+notificationText.BackgroundColor3 = Color3.new(1, 1, 1)--背景颜色3
+notificationText.TextColor3 = Color3.new(0, 0, 0)--文本颜色3
+notificationText.Text = "欢迎使用佳轩脚本"
+notificationText.Font = Enum.Font.SourceSansBold
+notificationText.FontSize = Enum.FontSize.Size24
+notificationText.TextScaled = true
+notificationText.Parent = notificationFrame
+
 local services = setmetatable({}, {
   __index = function(t, k)
     return game.GetService(game, k)
