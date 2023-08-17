@@ -1486,6 +1486,10 @@ tool:Button("变身史蒂夫",function()
 loadstring(game:HttpGet('http://jiami.guimei.work/a/1691968002.txt'))()
 end)
 
+tool:Textbox("设置移动速度",function(Value)
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+end)
+
 local fps = fps:section("fps ping",true)
 
 fps:Button("ping",function()
