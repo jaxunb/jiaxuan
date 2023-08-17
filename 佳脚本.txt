@@ -4,6 +4,10 @@ local ToggleUI = false
 library.currentTab = nil
 library.flags = {}
 
+notificationGui = Instance.new("ScreenGui")
+notificationGui.Enabled = true  
+notificationGui.IgnoreGuiInset = true 
+
 local notificationFrame = Instance.new("Frame")
 notificationFrame.Size = UDim2.new(0, 200, 0, 50)--大小
 notificationFrame.Position = UDim2.new(0.5, -100, 1, -50) --位置
@@ -21,6 +25,28 @@ notificationText.FontSize = Enum.FontSize.Size24
 notificationText.TextScaled = true
 notificationText.Parent = notificationFrame
 
+local function animateNotification()
+    local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Quint, Enum.EasingDirection.Out, 0, false, 0)
+    local tween = game:GetService("TweenService"):Create(notificationFrame, tweenInfo, {Position = UDim2.new(0.5, -100, 0.8, -50)})
+    tween:Play()
+    wait(3)
+    tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Quint, Enum.EasingDirection.Out, 0, false, 0)
+    tween = game:GetService("TweenService"):Create(notificationFrame, tweenInfo, {Position = UDim2.new(0.5, -100, 1, -50)})
+    tween:Play()
+    wait(1)--停止
+    notificationGui:Destroy()
+end
+
+notificationGui.Parent = game.Players.LocalPlayer.PlayerGui
+animateNotification()
+
+local CoreGui = game:GetService("StarterGui")
+
+CoreGui:SetCore("SendNotification", {
+    Title = "佳脚本",
+    Text = "成功注入器 等待加载",
+    Duration = 5, 
+})
 local services = setmetatable({}, {
   __index = function(t, k)
     return game.GetService(game, k)
