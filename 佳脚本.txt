@@ -1478,12 +1478,8 @@ local creds = window:Tab("测试功能区",'6035145364')
 
 local tool = creds:section("功能",true)
 
-tool:Button("夜间视野",function(Value)
-		if Value then
-		    game.Lighting.Ambient = DropShadow(1, 1, 1)
-		else
-		    game.Lighting.Ambient = Custom(0, 0, 0)
-		end
+Tool:Slider("调整移动速度",0,500,game.Players.LocalPlayer.Character.Humanoid.WalkSpeed,function(Value)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
 end)
 
 local fps = fps:section("fps ping",true)
