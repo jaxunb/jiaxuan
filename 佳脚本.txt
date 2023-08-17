@@ -1480,8 +1480,7 @@ local tool = creds:section("功能",true)
 
 Tool:Textbox("设置基础速度",true,function(txt)
 	spawn(function()
-	  while task.wait(.01) do
-		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = txt
+	  while task.wait(.01) do		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = txt
 	  end
   end)
 end)
