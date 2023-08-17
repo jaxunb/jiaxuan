@@ -21,7 +21,7 @@ end)
 --Slider 拉条
 --Toggle 输入框
 
-tab:Toggle("夜视",false, function(Value)
+tab:Toggle("夜间视野",false, function(Value)
     if Value then
         game.Lighting.Ambient = Color3.new(1, 1, 1)
     else
@@ -29,7 +29,7 @@ tab:Toggle("夜视",false, function(Value)
     end
 end)
 
-tab:Toggle("穿墙",false, function(Value)
+tab:Toggle("人物穿墙",false, function(Value)
     if Value then
         Noclip = true
         Stepped = game.RunService.Stepped:Connect(function()
@@ -54,8 +54,8 @@ end)
 
 
 
-tab:Button("透视", function()
-    loadstring(game:GetObjects("rbxassetid://10040701935")[1].Source)()
+tab:Button("人物透视", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/gJ2dUpXy'))()
 end)
 
 
@@ -83,30 +83,10 @@ tab:Textbox("手机自定义跳跃",true, function(v)
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
 end)
 
---[[
-tab:Dropdown("Dropdown",{"Option 1","Option 2","Option 3","Option 4","Option 5"}, function(t)
-print(t)
-end)
-]]
-
---[[
-tab:Colorpicker("Colorpicker",Color3.fromRGB(255,0,0), function(t)
-print(t)
-end)
-]]
-
-tab:Textbox("Textbox",true, function(t)
-print(t)
-end)
-
-tab:Bind("Bind",Enum.KeyCode.RightShift, function()
-print("Pressed!")
-end)
-
 tab:Label("Label")
 
-local changeclr = win:Tab("Change UI Color")
+local changeclr = win:Tab("自定义面板颜色")
 
-changeclr:Colorpicker("Change UI Color",Color3.fromRGB(44, 120, 224), function(t)
+changeclr:Colorpicker("自定义面板颜色",Color3.fromRGB(44, 120, 224), function(t)
 lib:ChangePresetColor(Color3.fromRGB(t.R * 255, t.G * 255, t.B * 255))
 end)
