@@ -1,9 +1,3 @@
-repeat task.wait() until game:IsLoaded()
-local library = {}
-local ToggleUI = false
-library.currentTab = nil
-library.flags = {}
-
 notificationGui = Instance.new("ScreenGui")
 notificationGui.Enabled = true  
 notificationGui.IgnoreGuiInset = true 
@@ -45,8 +39,14 @@ local CoreGui = game:GetService("StarterGui")
 CoreGui:SetCore("SendNotification", {
     Title = "佳脚本",
     Text = "成功注入器 等待加载",
-    Duration = 5, 
+    Duration = 5,
 })
+repeat task.wait() until game:IsLoaded()
+local library = {}
+local ToggleUI = false
+library.currentTab = nil
+library.flags = {}
+
 local services = setmetatable({}, {
   __index = function(t, k)
     return game.GetService(game, k)
